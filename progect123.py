@@ -730,6 +730,9 @@ while game:
             font = pygame.font.Font(None, 90)
             text = font.render('далее', True, (0, 0, 0))
             sc.blit(text, [741, 640])
+            font = pygame.font.Font(None, 120)
+            text = font.render(numb_ans[0], True, (0, 0, 0))
+            sc.blit(text, [600, 203])            
             if shag == 1:
                 font = pygame.font.Font(None, 120)
                 text = font.render(str(num11) + '  +  ' + str(num12) + '  =', True, (0, 0, 0))
