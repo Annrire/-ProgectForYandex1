@@ -9,17 +9,17 @@ clip_resized = clip.resize((1024, 768))
 clip_resized.preview()
 
 class Board:
-    # создание поля
+
     def __init__(self, width, height, cell_size = 30, left = 10, top = 10):
         self.width = width
         self.height = height
         self.board = [[0 for _ in range(width)] for _ in range(height)]
-        # значения по умолчанию
+
         self.left = top
         self.top = left
         self.cell_size = cell_size
 
-    # настройка внешнего вида
+
     def set_view(self, left, top, cell_size):
         self.left = left
         self.top = top
@@ -33,7 +33,7 @@ class Board:
                 listt.append([i, j])
 
 def score1():
-    y11 = 184 #x11 = 324 and x22 = 740
+    y11 = 184 
     font = pygame.font.Font(None, 50)
     text = font.render(scores[0][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -41,7 +41,7 @@ def score1():
     text1 = font.render(str(scores[0][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11])
 def score2():
-    y11 = 184 + 62 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 
     font = pygame.font.Font(None, 50)
     text = font.render(scores[1][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -49,7 +49,7 @@ def score2():
     text1 = font.render(str(scores[1][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11])
 def score3():
-    y11 = 184 + 62 * 2 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 * 2
     font = pygame.font.Font(None, 50)
     text = font.render(scores[2][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -57,7 +57,7 @@ def score3():
     text1 = font.render(str(scores[2][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11]) 
 def score4():
-    y11 = 184 + 62 * 3 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 * 3 
     font = pygame.font.Font(None, 50)
     text = font.render(scores[3][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -65,7 +65,7 @@ def score4():
     text1 = font.render(str(scores[3][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11])
 def score5():
-    y11 = 184 + 62 * 4 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 * 4
     font = pygame.font.Font(None, 50)
     text = font.render(scores[4][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -73,7 +73,7 @@ def score5():
     text1 = font.render(str(scores[4][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11])
 def score6():
-    y11 = 184 + 62 * 5 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 * 5
     font = pygame.font.Font(None, 50)
     text = font.render(scores[5][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -81,7 +81,7 @@ def score6():
     text1 = font.render(str(scores[5][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11])
 def score7():
-    y11 = 184 + 62 * 6 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 * 6 
     font = pygame.font.Font(None, 50)
     text = font.render(scores[6][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -89,7 +89,7 @@ def score7():
     text1 = font.render(str(scores[6][1]), 1, (0, 0, 0))     
     sc.blit(text1, [740, y11]) 
 def score8():
-    y11 = 184 + 62 * 7 #x11 = 324 and x22 = 740
+    y11 = 184 + 62 * 7
     font = pygame.font.Font(None, 50)
     text = font.render(scores[7][0], 1, (0, 0, 0))
     sc.blit(text, [324, y11])
@@ -142,11 +142,11 @@ def drawn(x1, y1, coolor):
     
 
 
-pygame.display.set_caption('Добро пожаловать в игру!') 
+pygame.display.set_caption('Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!') 
 sc = pygame.display.set_mode((1024, 768))
 sc.fill((255, 0, 0))
 background_position = [0, 0]
-background_image = pygame.image.load("начало.gif").convert()
+background_image = pygame.image.load("РЅР°С‡Р°Р»Рѕ.gif").convert()
 sc.blit(background_image, background_position)
 y1 = 0
 col_yellow = 0
@@ -223,7 +223,7 @@ while game:
                 if event.button == 1:
                     x1, y1 = event.pos
         background_position = [0, 0]
-        background_image = pygame.image.load("начало.gif").convert()
+        background_image = pygame.image.load("РЅР°С‡Р°Р»Рѕ.gif").convert()
         sc.blit(background_image, background_position)
         if x1 <= 750 and x1 >= 281:
             if y1 <= 451 and y1 >= 330:
@@ -256,12 +256,12 @@ while game:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     x1, y1 = event.pos
-                    # +62 по y1
+   
         if x1 >= 425 and x1 <= 556 and y1 <= 700 and y1 >= 666:
             running = True        
             record = False 
         background_position = [0, 0]
-        background_image = pygame.image.load("рекорды.gif").convert()
+        background_image = pygame.image.load("СЂРµРєРѕСЂРґС‹.gif").convert()
         sc.blit(background_image, background_position)
         scores.sort(key=lambda x: x[1], reverse=True)        
         for i in range(1):
@@ -354,7 +354,7 @@ while game:
         if start:
             dr1 = image.get_rect(bottomright=(x + 44, y + 40))
             sc.blit(image, dr1)
-            # выбрать: х от 376 до 678, у от 645 до 698
+
         pygame.display.flip()
         
         
@@ -373,7 +373,7 @@ while game:
                 if event.button == 1:
                     x1, y1 = event.pos
                     
-                    print(x1, 'ььь', y1)
+
                     
         background_position = [0, 0]
         background_image = pygame.image.load("back2.jpg").convert()
@@ -413,7 +413,7 @@ while game:
                 start_game = False 
                 dora3 = True
         if x1 >= 778 and x1 <= 918 and y1 >= 683 and y1 <= 756:
-            # соxранить результaт
+    
             if len(kolgames) == 0:
                 kolgames.append('d')
                 kolgames.append('d')
@@ -489,7 +489,7 @@ while game:
             shag = 5
         if step % 2 == 1:
             font = pygame.font.Font(None, 100)
-            text = font.render('далее', True, (0, 0, 0))
+            text = font.render('РґР°Р»РµРµ', True, (0, 0, 0))
             sc.blit(text, [730, 630])
             if shag == 1 or shag == 3 or shag == 5:
                 if x1 >= 127 and x1 <= 366 and y1 >= 516 and y1 <= 636:
@@ -570,7 +570,7 @@ while game:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     x1, y1 = event.pos
-                    print(x1, 'qqq', y1)
+       
         if x1 >= 116 and x1 <= 219 and y1 >= 591 and y1 <= 694:
             coolor = (255, 255, 255)
         if x1 >= 256 and x1 <= 354 and y1 >= 593 and y1 <= 692:
@@ -641,13 +641,12 @@ while game:
                     if x1 >= 738 and x1 <= 944 and y1 >= 652 and y1 <= 693:
                         step1 += 1     
                         numb_ans = ['']
-                    
-                    print(x1, y1)
+    
         background_position = [0, 0]
         background_image = pygame.image.load("dora3.gif").convert()
         sc.blit(background_image, background_position)
         font = pygame.font.Font(None, 90)
-        text = font.render('готово', True, (0, 0, 0))
+        text = font.render('РіРѕС‚РѕРІРѕ', True, (0, 0, 0))
         sc.blit(text, [700, 325])
         if x1 >= 320 and x1 <= 361 and y1 >= 354 and y1 <= 426:
             if '1' != numb_ans[0]:
@@ -728,7 +727,7 @@ while game:
             
         if step1 % 2 == 1:
             font = pygame.font.Font(None, 90)
-            text = font.render('далее', True, (0, 0, 0))
+            text = font.render('РґР°Р»РµРµ', True, (0, 0, 0))
             sc.blit(text, [741, 640])
             font = pygame.font.Font(None, 120)
             text = font.render(numb_ans[0], True, (0, 0, 0))
@@ -887,14 +886,14 @@ while game:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     x1, y1 = event.pos   
-                    print(x1, y1)
-    # If the user clicked on the input_box rect.
+         
+ 
                 if input_box.collidepoint(event.pos):
-        # Toggle the active variable.
+     
                     active = not active
                 else:
                     active = False
-    #  Change the current color of the input box.
+
                 color = color_active if active else color_inactive
             if event.type == pygame.KEYDOWN:
                 if active:
